@@ -1,0 +1,36 @@
+name: 'PR Size Labeler'
+description: 'Automatically label pull requests by diff size (XS, S, M, L, XL) to improve code review prioritization'
+author: 'ollieb89'
+branding:
+  icon: 'tag'
+  color: 'blue'
+inputs:
+  github-token:
+    description: 'GitHub token for API access'
+    default: '${{ github.token }}'
+  xs-max:
+    description: 'Maximum lines changed for XS label'
+    default: '10'
+  s-max:
+    description: 'Maximum lines changed for S label'
+    default: '50'
+  m-max:
+    description: 'Maximum lines changed for M label'
+    default: '200'
+  l-max:
+    description: 'Maximum lines changed for L label'
+    default: '500'
+  label-prefix:
+    description: 'Prefix for labels (e.g., "size/")'
+    default: 'size/'
+  exclude-patterns:
+    description: 'File patterns to exclude from size calculation (one per line)'
+    default: |
+      package-lock.json
+      yarn.lock
+      pnpm-lock.yaml
+      *.generated.*
+      dist/**
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

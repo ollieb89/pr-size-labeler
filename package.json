@@ -1,0 +1,20 @@
+{
+  "name": "pr-size-labeler",
+  "version": "1.0.0",
+  "description": "GitHub Action to label PRs by diff size",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts --out dist",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "minimatch": "^9.0.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.0"
+  }
+}

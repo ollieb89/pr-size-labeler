@@ -105,3 +105,9 @@ Use outputs in subsequent steps:
 ## License
 
 MIT
+
+---
+
+## 🔐 Level Up Your Security
+
+Using GitHub Actions? Grab the **[GitHub Actions Security Checklist](https://trivexia.gumroad.com/l/bfsbud)** — 50+ battle-tested checks covering secrets management, supply chain attacks, permission scoping, and runner hardening.
